@@ -22,8 +22,8 @@ def grade(points):
 def passed(points):
     """Return True for grades A-D, False for F and for invalid points."""
     # Reusing grade() keeps the boundaries in one place.
-    # `in` with a string checks for a substring; "invalid" and "F" are not in "ABCD".
-    # A tuple ("A", "B", "C", "D") would work just as well and be stricter.
+    # `in` with a tuple checks whether the letter equals one of the four.
+    # ("F" and "invalid" are not in it, so both give False.)
     return grade(points) in ("A", "B", "C", "D")
 
 
