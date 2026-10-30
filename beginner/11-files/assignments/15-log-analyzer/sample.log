@@ -5,7 +5,7 @@
 
 2026-10-30 08:16:11 INFO Retrying database connection
 2026-10-30 08:16:12 INFO Connected to database
-this line is broken
+#### corrupted ####
 2026-10-30 09:02:33 ERROR Payment provider returned 503
 2026-10-30 09:30:00 WARNING Disk usage at 85%
 2026-10-30 10:00:00 INFO Nightly report sent

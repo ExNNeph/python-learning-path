@@ -34,7 +34,7 @@ message with a `- ` in front:
 
 ```text
 ERROR: 2
-INFO: 6
+INFO: 5
 WARNING: 2
 
 - Database timeout after 30 s
@@ -49,12 +49,12 @@ if you just open it; do not catch it).
 ```python
 >>> parse_line("2026-10-30 08:16:10 ERROR Database timeout after 30 s\n")
 ('2026-10-30', '08:16:10', 'ERROR', 'Database timeout after 30 s')
->>> parse_line("this line is broken") is None
+>>> parse_line("#### corrupted ####") is None
 True
 >>> parse_line("   \n") is None
 True
 >>> count_levels("sample.log")
-{'INFO': 6, 'WARNING': 2, 'ERROR': 2}
+{'INFO': 5, 'WARNING': 2, 'ERROR': 2}
 >>> error_messages("sample.log")
 ['Database timeout after 30 s', 'Payment provider returned 503']
 ```

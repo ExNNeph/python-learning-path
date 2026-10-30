@@ -6,7 +6,7 @@ LOG = """\
 2026-10-30 08:00:01 INFO Server started on port 8080
 2026-10-30 08:16:10 ERROR Database timeout after 30 s
 
-this line is broken
+#### corrupted ####
 2026-10-30 08:20:00 WARNING Disk usage at 85%
 2026-10-30 09:02:33 ERROR Payment provider returned 503
 2026-10-30 10:00:00 INFO Nightly report sent
@@ -29,7 +29,7 @@ def test_parse_line(ex):
     )
 
 
-@pytest.mark.parametrize("line", ["", "\n", "   \n", "this line is broken", "2026-10-30 08:00:00 INFO"])
+@pytest.mark.parametrize("line", ["", "\n", "   \n", "#### corrupted ####", "2026-10-30 08:00:00 INFO"])
 def test_parse_line_invalid(ex, line):
     assert ex.parse_line(line) is None
 
