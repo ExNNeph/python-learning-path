@@ -15,6 +15,8 @@ def has_digit(text):
 def has_upper(text):
     """Return True if text contains at least one uppercase letter."""
     # any() does the loop above for us: True as soon as one item is truthy.
+    # (char.isupper() for char in text) is like a list comprehension in round brackets:
+    # it produces the values one by one instead of building a whole list first.
     return any(char.isupper() for char in text)
 
 
@@ -61,6 +63,8 @@ def check_all(passwords, min_length=8):
     """Return a dict mapping each password to its strength."""
     # Passing min_length by keyword makes the call robust: if someone later adds a
     # parameter before min_length in strength(), this line still does the right thing.
+    # {key: value for ...} is a dict comprehension: a list comprehension (lesson 07)
+    # that builds key-value pairs instead of a list.
     return {password: strength(password, min_length=min_length) for password in passwords}
 
 
