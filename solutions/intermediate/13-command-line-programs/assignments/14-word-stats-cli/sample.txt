@@ -1,0 +1,4 @@
+Python is a programming language that lets you work quickly.
+Python code is readable, and readable code is easy to change.
+Beautiful is better than ugly. Python's motto? There should be one obvious way to do it.
+Python, python, PYTHON!
