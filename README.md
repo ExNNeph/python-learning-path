@@ -34,13 +34,13 @@ Use it to learn Python from scratch, or come back later to relearn a topic you h
 | Level | You will be able to … | Status |
 |---|---|---|
 | 🟡 **[Beginner](beginner/)** | write small programs with variables, conditions, loops, lists, dicts, functions, exceptions and files, and run them from your own virtual environment | ✅ available: 13 lessons, 17 assignments, 1 capstone |
-| 🔵 **Intermediate** | structure larger programs: comprehensions, classes and OOP, iterators and generators, the standard library, testing with pytest, type hints | 🚧 coming soon |
+| 🔵 **[Intermediate](intermediate/)** | structure larger programs: comprehensions, classes and OOP, iterators and generators, the standard library, testing with pytest, type hints | 🚧 in progress: 13 lessons, 14 assignments, 1 capstone |
 | 🟣 **Advanced** | understand the deeper machinery: decorators, context managers, the data model, concurrency, packaging, performance | 🚧 coming soon |
 | ⚫ **Professional** | build and ship like a team: project layout, tooling and linting, CI, logging, APIs, databases, code review habits | 🚧 coming soon |
 
 ```mermaid
 flowchart LR
-    B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>coming soon"]
+    B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>in progress"]
     I --> A["🟣 Advanced<br/>coming soon"]
     A --> P["⚫ Professional<br/>coming soon"]
 ```
@@ -65,8 +65,10 @@ python-learning-path/
 │   ├── 02-variables-and-types/
 │   ├── …
 │   └── capstone-expense-tracker/         ← mini project that combines everything
+├── intermediate/                         ← same structure, one level up
 ├── solutions/                            ← commented template solutions (spoilers!)
-│   └── beginner/…                        ← mirrors the folders above
+│   ├── beginner/…                        ← mirrors the folders above
+│   └── intermediate/…
 ├── conftest.py                           ← lets the tests load your file or the solution
 └── .github/workflows/ci.yml              ← proves every solution passes its tests
 ```
