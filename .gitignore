@@ -10,3 +10,4 @@ summary.txt
 expenses.csv
 contacts.json
 .mypy_cache/
+tasks.json

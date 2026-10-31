@@ -10,6 +10,7 @@ That way the same tests check your work and prove the solutions correct.
 
 import importlib.util
 import os
+import sys
 from pathlib import Path
 
 import pytest
@@ -29,5 +30,9 @@ def ex(request):
     name = "exercise_" + "_".join(path.parent.relative_to(ROOT).parts).replace("-", "_")
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
+    # Registered like a normal import: dataclasses and typing look modules up in
+    # sys.modules (e.g. with `from __future__ import annotations`).
+    monkeypatch = request.getfixturevalue("monkeypatch")
+    monkeypatch.setitem(sys.modules, name, module)
     spec.loader.exec_module(module)
     return module
