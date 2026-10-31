@@ -11,3 +11,6 @@ expenses.csv
 contacts.json
 .mypy_cache/
 tasks.json
+*.egg-info/
+build/
+dist/
