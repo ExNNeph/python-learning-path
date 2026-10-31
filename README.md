@@ -35,13 +35,13 @@ Use it to learn Python from scratch, or come back later to relearn a topic you h
 |---|---|---|
 | 🟡 **[Beginner](beginner/)** | write small programs with variables, conditions, loops, lists, dicts, functions, exceptions and files, and run them from your own virtual environment | ✅ available: 13 lessons, 17 assignments, 1 capstone |
 | 🔵 **[Intermediate](intermediate/)** | structure larger programs: comprehensions, classes and OOP, dataclasses, iterators and generators, the standard library, JSON, regular expressions, type hints, testing with pytest, debugging, command-line tools | ✅ available: 13 lessons, 14 assignments, 1 capstone |
-| 🟣 **Advanced** | understand the deeper machinery: decorators, context managers, the data model, concurrency, packaging, performance | 🚧 coming soon |
+| 🟣 **[Advanced](advanced/)** | understand the deeper machinery: decorators, context managers, the data model, descriptors, metaclasses, pattern matching, generics, coroutines, threads, processes and asyncio, packaging, performance | ✅ available: 13 lessons, 14 assignments, 1 capstone |
 | ⚫ **Professional** | build and ship like a team: project layout, tooling and linting, CI, logging, APIs, databases, code review habits | 🚧 coming soon |
 
 ```mermaid
 flowchart LR
     B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>13 lessons · 14 assignments<br/>+ capstone"]
-    I --> A["🟣 Advanced<br/>coming soon"]
+    I --> A["🟣 Advanced<br/>13 lessons · 14 assignments<br/>+ capstone"]
     A --> P["⚫ Professional<br/>coming soon"]
 ```
 
@@ -66,9 +66,11 @@ python-learning-path/
 │   ├── …
 │   └── capstone-expense-tracker/         ← mini project that combines everything
 ├── intermediate/                         ← same structure, one level up
+├── advanced/                             ← and one more
 ├── solutions/                            ← commented template solutions (spoilers!)
 │   ├── beginner/…                        ← mirrors the folders above
-│   └── intermediate/…
+│   ├── intermediate/…
+│   └── advanced/…
 ├── conftest.py                           ← lets the tests load your file or the solution
 └── .github/workflows/ci.yml              ← proves every solution passes its tests
 ```
@@ -106,7 +108,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    ```bash
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate level):
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate and Advanced levels):
    ```bash
    python3 -m venv .venv
    ```
@@ -126,7 +128,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    git clone https://github.com/ExNNeph/python-learning-path.git
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate level):
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate and Advanced levels):
    ```powershell
    py -m venv .venv
    .venv\Scripts\Activate.ps1
@@ -181,7 +183,7 @@ You should see a Python version of 3.10 or higher and a line that ends with `pas
 
 ## How to work through an assignment
 
-1. **Read the lesson** (`beginner/NN-topic/README.md`, `intermediate/NN-topic/README.md`, …). Type the examples into the REPL yourself.
+1. **Read the lesson** (`beginner/NN-topic/README.md`, `intermediate/NN-topic/README.md`, `advanced/NN-topic/README.md`). Type the examples into the REPL yourself.
 2. **Read the task** (`assignments/NN-name/README.md`): the goal, example input and output, and hints.
 3. **Open `exercise.py`.** Every function has a docstring that says what it should do and a
    `raise NotImplementedError` line. Replace that line with your code.
@@ -268,7 +270,38 @@ Tick the boxes in your fork as you go (edit this file, change `[ ]` to `[x]`).
   - [ ] 14 · [Word stats CLI](intermediate/13-command-line-programs/assignments/14-word-stats-cli/)
 - [ ] 🏁 **[Capstone: task tracker](intermediate/capstone-task-tracker/)**
 
-### 🟣 Advanced · ⚫ Professional
+### 🟣 Advanced
+
+- [ ] **01 · [Decorators](advanced/01-decorators/)**
+  - [ ] 01 · [Decorator kit](advanced/01-decorators/assignments/01-decorator-kit/)
+- [ ] **02 · [Context managers](advanced/02-context-managers/)**
+  - [ ] 02 · [Resource guards](advanced/02-context-managers/assignments/02-resource-guards/)
+- [ ] **03 · [The data model](advanced/03-the-data-model/)**
+  - [ ] 03 · [Vector](advanced/03-the-data-model/assignments/03-vector/)
+  - [ ] 04 · [Sorted list](advanced/03-the-data-model/assignments/04-sorted-list/)
+- [ ] **04 · [Attribute access](advanced/04-attribute-access/)**
+  - [ ] 05 · [Validated fields](advanced/04-attribute-access/assignments/05-validated-fields/)
+- [ ] **05 · [Class customization](advanced/05-class-customization/)**
+  - [ ] 06 · [Plugin registry](advanced/05-class-customization/assignments/06-plugin-registry/)
+- [ ] **06 · [Structural pattern matching](advanced/06-pattern-matching/)**
+  - [ ] 07 · [Expression evaluator](advanced/06-pattern-matching/assignments/07-expression-evaluator/)
+- [ ] **07 · [Protocols and generics](advanced/07-protocols-and-generics/)**
+  - [ ] 08 · [Typed cache](advanced/07-protocols-and-generics/assignments/08-typed-cache/)
+- [ ] **08 · [Generators in depth](advanced/08-generators-in-depth/)**
+  - [ ] 09 · [Coroutine tools](advanced/08-generators-in-depth/assignments/09-coroutine-tools/)
+- [ ] **09 · [Functional tools](advanced/09-functional-tools/)**
+  - [ ] 10 · [Serializer](advanced/09-functional-tools/assignments/10-serializer/)
+- [ ] **10 · [Threads and processes](advanced/10-threads-and-processes/)**
+  - [ ] 11 · [Worker pool](advanced/10-threads-and-processes/assignments/11-worker-pool/)
+- [ ] **11 · [asyncio](advanced/11-asyncio/)**
+  - [ ] 12 · [Async crawler](advanced/11-asyncio/assignments/12-async-crawler/)
+- [ ] **12 · [Packaging](advanced/12-packaging/)**
+  - [ ] 13 · [Package split](advanced/12-packaging/assignments/13-package-split/)
+- [ ] **13 · [Performance](advanced/13-performance/)**
+  - [ ] 14 · [Speed-up](advanced/13-performance/assignments/14-speed-up/)
+- [ ] 🏁 **[Capstone: job runner](advanced/capstone-job-runner/)**
+
+### ⚫ Professional
 
 Coming soon.
 
