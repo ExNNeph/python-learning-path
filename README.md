@@ -34,13 +34,13 @@ Use it to learn Python from scratch, or come back later to relearn a topic you h
 | Level | You will be able to … | Status |
 |---|---|---|
 | 🟡 **[Beginner](beginner/)** | write small programs with variables, conditions, loops, lists, dicts, functions, exceptions and files, and run them from your own virtual environment | ✅ available: 13 lessons, 17 assignments, 1 capstone |
-| 🔵 **[Intermediate](intermediate/)** | structure larger programs: comprehensions, classes and OOP, iterators and generators, the standard library, testing with pytest, type hints | 🚧 in progress: 13 lessons, 14 assignments, 1 capstone |
+| 🔵 **[Intermediate](intermediate/)** | structure larger programs: comprehensions, classes and OOP, dataclasses, iterators and generators, the standard library, JSON, regular expressions, type hints, testing with pytest, debugging, command-line tools | ✅ available: 13 lessons, 14 assignments, 1 capstone |
 | 🟣 **Advanced** | understand the deeper machinery: decorators, context managers, the data model, concurrency, packaging, performance | 🚧 coming soon |
 | ⚫ **Professional** | build and ship like a team: project layout, tooling and linting, CI, logging, APIs, databases, code review habits | 🚧 coming soon |
 
 ```mermaid
 flowchart LR
-    B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>in progress"]
+    B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>13 lessons · 14 assignments<br/>+ capstone"]
     I --> A["🟣 Advanced<br/>coming soon"]
     A --> P["⚫ Professional<br/>coming soon"]
 ```
@@ -106,7 +106,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    ```bash
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install pytest:
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate level):
    ```bash
    python3 -m venv .venv
    ```
@@ -126,7 +126,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    git clone https://github.com/ExNNeph/python-learning-path.git
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install pytest:
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate level):
    ```powershell
    py -m venv .venv
    .venv\Scripts\Activate.ps1
@@ -181,7 +181,7 @@ You should see a Python version of 3.10 or higher and a line that ends with `pas
 
 ## How to work through an assignment
 
-1. **Read the lesson** (`beginner/NN-topic/README.md`). Type the examples into the REPL yourself.
+1. **Read the lesson** (`beginner/NN-topic/README.md`, `intermediate/NN-topic/README.md`, …). Type the examples into the REPL yourself.
 2. **Read the task** (`assignments/NN-name/README.md`): the goal, example input and output, and hints.
 3. **Open `exercise.py`.** Every function has a docstring that says what it should do and a
    `raise NotImplementedError` line. Replace that line with your code.
@@ -237,7 +237,38 @@ Tick the boxes in your fork as you go (edit this file, change `[ ]` to `[x]`).
   - [ ] 17 · [Requirements parser](beginner/13-venv-and-pip/assignments/17-requirements-parser/)
 - [ ] 🏁 **[Capstone: expense tracker](beginner/capstone-expense-tracker/)**
 
-### 🔵 Intermediate · 🟣 Advanced · ⚫ Professional
+### 🔵 Intermediate
+
+- [ ] **01 · [Comprehensions](intermediate/01-comprehensions/)**
+  - [ ] 01 · [Data wrangler](intermediate/01-comprehensions/assignments/01-data-wrangler/)
+- [ ] **02 · [Functions in depth](intermediate/02-functions-in-depth/)**
+  - [ ] 02 · [Function toolkit](intermediate/02-functions-in-depth/assignments/02-function-toolkit/)
+- [ ] **03 · [Classes and objects](intermediate/03-classes-and-objects/)**
+  - [ ] 03 · [Bank account](intermediate/03-classes-and-objects/assignments/03-bank-account/)
+- [ ] **04 · [Inheritance and composition](intermediate/04-inheritance-and-composition/)**
+  - [ ] 04 · [Shapes](intermediate/04-inheritance-and-composition/assignments/04-shapes/)
+- [ ] **05 · [Dataclasses and enums](intermediate/05-dataclasses-and-enums/)**
+  - [ ] 05 · [Inventory](intermediate/05-dataclasses-and-enums/assignments/05-inventory/)
+- [ ] **06 · [Iterators and generators](intermediate/06-iterators-and-generators/)**
+  - [ ] 06 · [Custom iterators](intermediate/06-iterators-and-generators/assignments/06-custom-iterators/)
+  - [ ] 07 · [Lazy pipeline](intermediate/06-iterators-and-generators/assignments/07-lazy-pipeline/)
+- [ ] **07 · [The standard library toolbox](intermediate/07-standard-library-toolbox/)**
+  - [ ] 08 · [Power tools](intermediate/07-standard-library-toolbox/assignments/08-power-tools/)
+- [ ] **08 · [JSON and structured data](intermediate/08-json-and-structured-data/)**
+  - [ ] 09 · [Contact book](intermediate/08-json-and-structured-data/assignments/09-contact-book/)
+- [ ] **09 · [Regular expressions](intermediate/09-regular-expressions/)**
+  - [ ] 10 · [Text extractor](intermediate/09-regular-expressions/assignments/10-text-extractor/)
+- [ ] **10 · [Type hints](intermediate/10-type-hints/)**
+  - [ ] 11 · [Typed gradebook](intermediate/10-type-hints/assignments/11-typed-gradebook/)
+- [ ] **11 · [Testing with pytest](intermediate/11-testing-with-pytest/)**
+  - [ ] 12 · [Bug hunter tests](intermediate/11-testing-with-pytest/assignments/12-bug-hunter-tests/)
+- [ ] **12 · [Debugging](intermediate/12-debugging/)**
+  - [ ] 13 · [Bug hunt](intermediate/12-debugging/assignments/13-bug-hunt/)
+- [ ] **13 · [Command-line programs](intermediate/13-command-line-programs/)**
+  - [ ] 14 · [Word stats CLI](intermediate/13-command-line-programs/assignments/14-word-stats-cli/)
+- [ ] 🏁 **[Capstone: task tracker](intermediate/capstone-task-tracker/)**
+
+### 🟣 Advanced · ⚫ Professional
 
 Coming soon.
 
