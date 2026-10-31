@@ -36,13 +36,13 @@ Use it to learn Python from scratch, or come back later to relearn a topic you h
 | 🟡 **[Beginner](beginner/)** | write small programs with variables, conditions, loops, lists, dicts, functions, exceptions and files, and run them from your own virtual environment | ✅ available: 13 lessons, 17 assignments, 1 capstone |
 | 🔵 **[Intermediate](intermediate/)** | structure larger programs: comprehensions, classes and OOP, dataclasses, iterators and generators, the standard library, JSON, regular expressions, type hints, testing with pytest, debugging, command-line tools | ✅ available: 13 lessons, 14 assignments, 1 capstone |
 | 🟣 **[Advanced](advanced/)** | understand the deeper machinery: decorators, context managers, the data model, descriptors, metaclasses, pattern matching, generics, coroutines, threads, processes and asyncio, packaging, performance | ✅ available: 13 lessons, 14 assignments, 1 capstone |
-| ⚫ **Professional** | build and ship like a team: project layout, tooling and linting, CI, logging, APIs, databases, code review habits | 🚧 coming soon |
+| ⚫ **[Professional](professional/)** | build and ship like a team: project setup, code quality tools, testing, logging, configuration and secrets, resilience, databases, HTTP APIs on both sides, architecture, security, Git and CI, code review | ✅ available: 13 lessons, 13 assignments, 1 capstone |
 
 ```mermaid
 flowchart LR
     B["🟡 Beginner<br/>13 lessons · 17 assignments<br/>+ capstone"] --> I["🔵 Intermediate<br/>13 lessons · 14 assignments<br/>+ capstone"]
     I --> A["🟣 Advanced<br/>13 lessons · 14 assignments<br/>+ capstone"]
-    A --> P["⚫ Professional<br/>coming soon"]
+    A --> P["⚫ Professional<br/>13 lessons · 13 assignments<br/>+ capstone"]
 ```
 
 ## How the repo works
@@ -67,10 +67,12 @@ python-learning-path/
 │   └── capstone-expense-tracker/         ← mini project that combines everything
 ├── intermediate/                         ← same structure, one level up
 ├── advanced/                             ← and one more
+├── professional/                         ← and the last one
 ├── solutions/                            ← commented template solutions (spoilers!)
 │   ├── beginner/…                        ← mirrors the folders above
 │   ├── intermediate/…
-│   └── advanced/…
+│   ├── advanced/…
+│   └── professional/…
 ├── conftest.py                           ← lets the tests load your file or the solution
 └── .github/workflows/ci.yml              ← proves every solution passes its tests
 ```
@@ -108,7 +110,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    ```bash
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate and Advanced levels):
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate, Advanced and Professional levels):
    ```bash
    python3 -m venv .venv
    ```
@@ -128,7 +130,7 @@ Lesson [13 · venv and pip](beginner/13-venv-and-pip/) explains what each step d
    git clone https://github.com/ExNNeph/python-learning-path.git
    cd python-learning-path
    ```
-3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate and Advanced levels):
+3. Create and activate a virtual environment, then install the tools (pytest, and mypy for the Intermediate, Advanced and Professional levels):
    ```powershell
    py -m venv .venv
    .venv\Scripts\Activate.ps1
@@ -183,7 +185,7 @@ You should see a Python version of 3.10 or higher and a line that ends with `pas
 
 ## How to work through an assignment
 
-1. **Read the lesson** (`beginner/NN-topic/README.md`, `intermediate/NN-topic/README.md`, `advanced/NN-topic/README.md`). Type the examples into the REPL yourself.
+1. **Read the lesson** (`beginner/NN-topic/README.md`, `intermediate/NN-topic/README.md`, `advanced/NN-topic/README.md`, `professional/NN-topic/README.md`). Type the examples into the REPL yourself.
 2. **Read the task** (`assignments/NN-name/README.md`): the goal, example input and output, and hints.
 3. **Open `exercise.py`.** Every function has a docstring that says what it should do and a
    `raise NotImplementedError` line. Replace that line with your code.
@@ -303,7 +305,33 @@ Tick the boxes in your fork as you go (edit this file, change `[ ]` to `[x]`).
 
 ### ⚫ Professional
 
-Coming soon.
+- [ ] **01 · [Project setup](professional/01-project-setup/)**
+  - [ ] 01 · [Requirement checker](professional/01-project-setup/assignments/01-requirement-checker/)
+- [ ] **02 · [Code quality tools](professional/02-code-quality-tools/)**
+  - [ ] 02 · [Mini linter](professional/02-code-quality-tools/assignments/02-mini-linter/)
+- [ ] **03 · [Testing like a professional](professional/03-testing-like-a-professional/)**
+  - [ ] 03 · [Test the tests](professional/03-testing-like-a-professional/assignments/03-test-the-tests/)
+- [ ] **04 · [Logging](professional/04-logging/)**
+  - [ ] 04 · [Logging setup](professional/04-logging/assignments/04-logging-setup/)
+- [ ] **05 · [Configuration and secrets](professional/05-configuration-and-secrets/)**
+  - [ ] 05 · [Settings loader](professional/05-configuration-and-secrets/assignments/05-settings-loader/)
+- [ ] **06 · [Errors and resilience](professional/06-errors-and-resilience/)**
+  - [ ] 06 · [Resilience kit](professional/06-errors-and-resilience/assignments/06-resilience-kit/)
+- [ ] **07 · [Databases](professional/07-databases/)**
+  - [ ] 07 · [Library repository](professional/07-databases/assignments/07-library-repository/)
+- [ ] **08 · [Calling HTTP APIs](professional/08-calling-http-apis/)**
+  - [ ] 08 · [API client](professional/08-calling-http-apis/assignments/08-api-client/)
+- [ ] **09 · [Building a web API](professional/09-building-a-web-api/)**
+  - [ ] 09 · [Micro framework](professional/09-building-a-web-api/assignments/09-micro-framework/)
+- [ ] **10 · [Architecture](professional/10-architecture/)**
+  - [ ] 10 · [Ports and adapters](professional/10-architecture/assignments/10-ports-and-adapters/)
+- [ ] **11 · [Security](professional/11-security/)**
+  - [ ] 11 · [Security kit](professional/11-security/assignments/11-security-kit/)
+- [ ] **12 · [Git, CI and releases](professional/12-git-ci-and-releases/)**
+  - [ ] 12 · [Release notes](professional/12-git-ci-and-releases/assignments/12-release-notes/)
+- [ ] **13 · [Code review and documentation](professional/13-code-review-and-documentation/)**
+  - [ ] 13 · [Review fixes](professional/13-code-review-and-documentation/assignments/13-review-fixes/)
+- [ ] 🏁 **[Capstone: link shortener](professional/capstone-link-shortener/)**
 
 ## License and reuse
 
